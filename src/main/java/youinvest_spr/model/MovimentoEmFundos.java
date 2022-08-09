@@ -1,4 +1,4 @@
-package br.com.models;
+package youinvest_spr.model;
 
 import java.util.Calendar;
 

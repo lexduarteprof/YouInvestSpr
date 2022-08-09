@@ -1,4 +1,4 @@
-package br.com.testes;
+package youinvest_spr.testes;
 
 import java.util.Date;
 import java.util.ArrayList;
@@ -6,13 +6,13 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-import br.com.models.Carteira;
-import br.com.models.CotaDeFundo;
-import br.com.models.FundoDeInvestimento;
-import br.com.models.MovimentoEmFundos;
-import br.com.models.MovimentoFinanceiro;
-import br.com.models.TIPO_MOVIMENTO;
-import br.com.utils.DateConverter;
+import youinvest_spr.model.Carteira;
+import youinvest_spr.model.CotaDeFundo;
+import youinvest_spr.model.FundoDeInvestimento;
+import youinvest_spr.model.MovimentoEmFundos;
+import youinvest_spr.model.MovimentoFinanceiro;
+import youinvest_spr.model.TIPO_MOVIMENTO;
+import youinvest_spr.utils.DateConverter;
 
 public class Teste {
 	
@@ -20,6 +20,11 @@ public class Teste {
 	public static FundoDeInvestimento fundodeInvestimento = 
 			new FundoDeInvestimento("INFRAESTRUTURA INFLAÇÃO CRÉDITO PRIVADO",
 					"Santander Asset Management", 1000L);
+	
+	
+	
+	
+	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -45,37 +50,37 @@ public class Teste {
 		
 			CotasList.get(cCota).setDataDaCota("01/07/2022");
 			CotasList.get(cCota).setValorDaCota(1.07271978);
-			CotasList.get(cCota).setCodigoDoFundo(1000);
+			CotasList.get(cCota).setFundodeinvestimento(fundodeInvestimento);
 			
 			cCota++;
 			CotasList.get(cCota).setDataDaCota("04/07/2022");
 			CotasList.get(cCota).setValorDaCota(1.0702506);
-			CotasList.get(cCota).setCodigoDoFundo(1000);	
+			CotasList.get(cCota).setFundodeinvestimento(fundodeInvestimento);	
 
 			cCota++;
 			CotasList.get(cCota).setDataDaCota("05/07/2022");
 			CotasList.get(cCota).setValorDaCota(1.06834541);
-			CotasList.get(cCota).setCodigoDoFundo(1000);	
+			CotasList.get(cCota).setFundodeinvestimento(fundodeInvestimento);	
 			
 			cCota++;
 			CotasList.get(cCota).setDataDaCota("06/07/2022");
 			CotasList.get(cCota).setValorDaCota(1.06606754);
-			CotasList.get(cCota).setCodigoDoFundo(1000);	
+			CotasList.get(cCota).setFundodeinvestimento(fundodeInvestimento);	
 			
 			cCota++;
 			CotasList.get(cCota).setDataDaCota("07/07/2022");
 			CotasList.get(cCota).setValorDaCota(1.06654311);
-			CotasList.get(cCota).setCodigoDoFundo(1000);	
+			CotasList.get(cCota).setFundodeinvestimento(fundodeInvestimento);	
 			
 			cCota++;
 			CotasList.get(cCota).setDataDaCota("08/07/2022");
 			CotasList.get(cCota).setValorDaCota(1.06150462);
-			CotasList.get(cCota).setCodigoDoFundo(1000);	
+			CotasList.get(cCota).setFundodeinvestimento(fundodeInvestimento);	
 			
 			cCota++;
 			CotasList.get(cCota).setDataDaCota("11/07/2022");
 			CotasList.get(cCota).setValorDaCota(1.05830657);
-			CotasList.get(cCota).setCodigoDoFundo(1000);	
+			CotasList.get(cCota).setFundodeinvestimento(fundodeInvestimento);	
 	
 	
 			CotasList.forEach(cota ->{

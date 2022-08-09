@@ -1,10 +1,10 @@
-package br.com.models;
+package youinvest_spr.model;
 
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-import br.com.utils.DateConverter;
+import youinvest_spr.utils.DateConverter;
 
 public class Carteira {
 	

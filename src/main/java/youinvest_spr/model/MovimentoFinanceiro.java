@@ -1,9 +1,9 @@
-package br.com.models;
+package youinvest_spr.model;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-import br.com.utils.DateConverter;
+import youinvest_spr.utils.DateConverter;
 
 public class MovimentoFinanceiro {
 	

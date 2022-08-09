@@ -1,26 +1,54 @@
-package br.com.models;
+package youinvest_spr.model;
 
-import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
-import java.util.stream.Collectors;
+
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.NamedAttributeNode;
+import javax.persistence.NamedEntityGraph;
+import javax.persistence.OneToMany;
+
+import org.hibernate.FetchMode;
+import org.springframework.transaction.annotation.Transactional;
+
+
+
+@Entity(name = "Tb_Fundos")
+@Transactional
+@NamedEntityGraph(name = "FundoDeInvestimento.detail",
+attributeNodes = @NamedAttributeNode("listaDeCotas"))
 
 public class FundoDeInvestimento {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long codigoDoFundo;
 	private String nomeDoFundo;
 	private String nomeDoGestor;
-	private long codigoDoFundo;
 	private String perfilDoInvestidor;
 	private String descricao;
-	private List<CotaDeFundo> listaDeCotas = new ArrayList<CotaDeFundo>();
-		
+	
+	
+	
+	@OneToMany(fetch = FetchType.EAGER)
+	@JoinColumn(name = "codigo_fundo")
+	private List<CotaDeFundo> listaDeCotas;
+
 	
 	public FundoDeInvestimento(String nomeDoFundo, String nomeDoGestor, long codigoDoFundo) {
 		super();
 		this.nomeDoFundo = nomeDoFundo;
 		this.nomeDoGestor = nomeDoGestor;
 		this.codigoDoFundo = codigoDoFundo;
+	}
+
+	public FundoDeInvestimento() {
+		super();
 	}
 
 	@Override
